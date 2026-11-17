@@ -6,3 +6,5 @@ def producto(e,f):
     return e * f
 def division(g,h):
     return g / h
+def potencia(base, exponente):
+    return base ** exponente
