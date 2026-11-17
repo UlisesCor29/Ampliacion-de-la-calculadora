@@ -20,3 +20,12 @@ def porcentaje(porcentaje, cantidad):
     return (porcentaje / 100) * cantidad
 def valor_absoluto(numero):
     return abs(numero)
+def factorial(numero):
+    if not isinstance(numero, int) or isinstance(numero, bool) or numero < 0:
+        raise ValueError("El número debe ser un entero no negativo.")
+    if numero == 0:
+        return 1
+    resultado = 1
+    for i in range(1, numero + 1):
+        resultado *= i
+    return resultado
