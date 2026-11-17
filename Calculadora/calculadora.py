@@ -119,3 +119,13 @@ while True:
 
     except (ValueError, ZeroDivisionError) as error:
         print("Error:", error)
+        
+    continuar = input("\n¿Desea realizar otra operación? (s/n): ").lower()
+
+    while continuar not in ["s", "n"]:
+        print("Opción no válida. Ingrese s o n.")
+        continuar = input("¿Desea realizar otra operación? (s/n): ").lower()
+
+    if continuar == "n":
+        print("Gracias por utilizar la calculadora.")
+        break
