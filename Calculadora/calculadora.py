@@ -24,6 +24,13 @@ def leer_entero(mensaje):
 
 # Almacena las operaciones realizadas.
 historial = []
+# Elimina todas las operaciones del historial.
+def limpiar_historial():
+    if len(historial) == 0:
+        print("El historial ya está vacío.")
+    else:
+        historial.clear()
+        print("El historial se ha limpiado correctamente.")
 
 
 while True:
@@ -41,11 +48,12 @@ while True:
     print("11. Promedio")
     print("12. Redondeo")
     print("13. Consultar historial")
-    print("14. Salir")
+    print("14. Limpiar historial")
+    print("15. Salir")
 
     opcion = input("Seleccione una opción: ")
 
-    if opcion == "14":
+    if opcion == "15":
         print("Gracias por utilizar la calculadora.")
         break
 
@@ -61,6 +69,11 @@ while True:
                 print("Valores:", registro["valores"])
                 print("Resultado:", registro["resultado"])
 
+        continue
+
+    # Limpiar el historial.
+    if opcion == "14":
+        limpiar_historial()
         continue
 
     if opcion not in ["1", "2", "3", "4", "5", "6", "7",
